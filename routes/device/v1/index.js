@@ -6,6 +6,7 @@
 const express =  require('express');
 const router =  express.Router();
 router.use('/device/auth',require('./auth'));
+router.use(require('./EventRoutes'));
 router.use(require('./BlogRoutes'));
 router.use(require('./userRoutes'));
 
