@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "rahul_s_application",
-    "_postman_id": "01cead36-39c3-4057-bb35-b642c81a2c71",
+    "_postman_id": "ff712890-b075-4052-91fd-b92fadaa6ba1",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -9,6 +9,874 @@
       "name": "admin",
       "description": "admin APIs",
       "item": [
+        {
+          "name": "Event",
+          "description": "Event Model APIs",
+          "item": [
+            {
+              "name": "getEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEvent_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae95d\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n    \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/create",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Ruben Swift\",\n  \"description\": \"orange\",\n  \"address\": {\n    \"line1\": \"Supervisor\",\n    \"line2\": \"deposit\",\n    \"city\": \"Nigeria\",\n    \"country\": \"initiative\",\n    \"state\": \"functionalities\",\n    \"pincode\": \"open-source\",\n    \"lat\": 28,\n    \"lng\": 889\n  },\n  \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n  \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Andrea Weber\",\n      \"image\": \"National\",\n      \"email\": \"Zoey_Hansen@hotmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Wilma Bogan\",\n    \"image\": \"cross-platform\",\n    \"email\": \"Verner.Howell55@yahoo.com\",\n    \"url\": \"Account\"\n  },\n  \"image\": \"USB\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "addEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/create",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae957\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n    \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/list",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "findAllEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/list",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Ruben Swift\",\n        \"description\": \"orange\",\n        \"address\": {\n          \"line1\": \"Supervisor\",\n          \"line2\": \"deposit\",\n          \"city\": \"Nigeria\",\n          \"country\": \"initiative\",\n          \"state\": \"functionalities\",\n          \"pincode\": \"open-source\",\n          \"lat\": 28,\n          \"lng\": 889\n        },\n        \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n        \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n        \"speakers\": [\n          {\n            \"_id\": false,\n            \"name\": \"Andrea Weber\",\n            \"image\": \"National\",\n            \"email\": \"Zoey_Hansen@hotmail.com\"\n          }\n        ],\n        \"organizer\": {\n          \"name\": \"Wilma Bogan\",\n          \"image\": \"cross-platform\",\n          \"email\": \"Verner.Howell55@yahoo.com\",\n          \"url\": \"Account\"\n        },\n        \"image\": \"USB\",\n        \"id\": \"622f127e237a0a2ff00ae958\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n        \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getEventCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/count",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEventCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/count",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/addBulk",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Ruben Swift\",\n      \"description\": \"orange\",\n      \"address\": {\n        \"line1\": \"Supervisor\",\n        \"line2\": \"deposit\",\n        \"city\": \"Nigeria\",\n        \"country\": \"initiative\",\n        \"state\": \"functionalities\",\n        \"pincode\": \"open-source\",\n        \"lat\": 28,\n        \"lng\": 889\n      },\n      \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n      \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Andrea Weber\",\n          \"image\": \"National\",\n          \"email\": \"Zoey_Hansen@hotmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Wilma Bogan\",\n        \"image\": \"cross-platform\",\n        \"email\": \"Verner.Howell55@yahoo.com\",\n        \"url\": \"Account\"\n      },\n      \"image\": \"USB\"\n    }\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "insertBulkEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/addBulk",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Ruben Swift\",\n      \"description\": \"orange\",\n      \"address\": {\n        \"line1\": \"Supervisor\",\n        \"line2\": \"deposit\",\n        \"city\": \"Nigeria\",\n        \"country\": \"initiative\",\n        \"state\": \"functionalities\",\n        \"pincode\": \"open-source\",\n        \"lat\": 28,\n        \"lng\": 889\n      },\n      \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n      \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Andrea Weber\",\n          \"image\": \"National\",\n          \"email\": \"Zoey_Hansen@hotmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Wilma Bogan\",\n        \"image\": \"cross-platform\",\n        \"email\": \"Verner.Howell55@yahoo.com\",\n        \"url\": \"Account\"\n      },\n      \"image\": \"USB\",\n      \"id\": \"622f127e237a0a2ff00ae959\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n      \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteManyEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/deleteMany",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "deleteMany"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/deleteMany",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "deleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"ok\": 1,\n    \"deletedCount\": 2\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/softDeleteMany",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/softDeleteMany",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/updateBulk",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateBulkEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/updateBulk",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Ruben Swift\",\n      \"description\": \"orange\",\n      \"address\": {\n        \"line1\": \"Supervisor\",\n        \"line2\": \"deposit\",\n        \"city\": \"Nigeria\",\n        \"country\": \"initiative\",\n        \"state\": \"functionalities\",\n        \"pincode\": \"open-source\",\n        \"lat\": 28,\n        \"lng\": 889\n      },\n      \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n      \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Andrea Weber\",\n          \"image\": \"National\",\n          \"email\": \"Zoey_Hansen@hotmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Wilma Bogan\",\n        \"image\": \"cross-platform\",\n        \"email\": \"Verner.Howell55@yahoo.com\",\n        \"url\": \"Account\"\n      },\n      \"image\": \"USB\",\n      \"id\": \"622f127e237a0a2ff00ae95a\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n      \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/softDelete/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/softDelete/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/partial-update/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "partialupdateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/partial-update/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae95b\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n    \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/update/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Ruben Swift\",\n  \"description\": \"orange\",\n  \"address\": {\n    \"line1\": \"Supervisor\",\n    \"line2\": \"deposit\",\n    \"city\": \"Nigeria\",\n    \"country\": \"initiative\",\n    \"state\": \"functionalities\",\n    \"pincode\": \"open-source\",\n    \"lat\": 28,\n    \"lng\": 889\n  },\n  \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n  \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Andrea Weber\",\n      \"image\": \"National\",\n      \"email\": \"Zoey_Hansen@hotmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Wilma Bogan\",\n    \"image\": \"cross-platform\",\n    \"email\": \"Verner.Howell55@yahoo.com\",\n    \"url\": \"Account\"\n  },\n  \"image\": \"USB\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/update/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae95c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-03T06:31:50.139Z\",\n    \"updatedAt\": \"2022-11-10T03:21:55.316Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/admin/event/delete/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "event",
+                    "delete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteEvent_response",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/admin/event/delete/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "admin",
+                        "event",
+                        "delete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"ok\": 1,\n    \"deletedCount\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
         {
           "name": "Blog",
           "description": "Blog Model APIs",
@@ -78,7 +946,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4cc\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n    \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae96c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n    \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -114,7 +982,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"synthesize\",\n  \"alternativeHeadline\": \"Suriname\",\n  \"image\": \"Infrastructure\",\n  \"publishDate\": \"SDD\",\n  \"author\": {\n    \"name\": \"Rosie Nitzsche\",\n    \"image\": \"Unbranded\",\n    \"email\": \"Nikita67@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Jeff Cruickshank\",\n    \"url\": \"Officer\",\n    \"logo\": \"Bacon\"\n  },\n  \"articleSection\": \"Rustic\",\n  \"articleBody\": \"generate\",\n  \"description\": \"Stand-alone\",\n  \"slug\": \"Designer\",\n  \"url\": \"communities\",\n  \"isDraft\": false\n}"
+                  "raw": "{\n  \"title\": \"copying\",\n  \"alternativeHeadline\": \"Bedfordshire\",\n  \"image\": \"grow\",\n  \"publishDate\": \"Configurable\",\n  \"author\": {\n    \"name\": \"Ms. Jamie Kshlerin\",\n    \"image\": \"District\",\n    \"email\": \"Marina.Bauch47@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Delbert Conn\",\n    \"url\": \"evolve\",\n    \"logo\": \"Iowa\"\n  },\n  \"articleSection\": \"Computer\",\n  \"articleBody\": \"teal\",\n  \"description\": \"Programmable\",\n  \"slug\": \"Fantastic\",\n  \"url\": \"schemas\",\n  \"isDraft\": false\n}"
                 },
                 "description": "",
                 "auth": {
@@ -145,7 +1013,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4c6\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n    \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae966\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n    \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -212,7 +1080,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"synthesize\",\n        \"alternativeHeadline\": \"Suriname\",\n        \"image\": \"Infrastructure\",\n        \"publishDate\": \"SDD\",\n        \"author\": {\n          \"name\": \"Rosie Nitzsche\",\n          \"image\": \"Unbranded\",\n          \"email\": \"Nikita67@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Jeff Cruickshank\",\n          \"url\": \"Officer\",\n          \"logo\": \"Bacon\"\n        },\n        \"articleSection\": \"Rustic\",\n        \"articleBody\": \"generate\",\n        \"description\": \"Stand-alone\",\n        \"slug\": \"Designer\",\n        \"url\": \"communities\",\n        \"isDraft\": false,\n        \"id\": \"622f11f08c911a5abb0ce4c7\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n        \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"copying\",\n        \"alternativeHeadline\": \"Bedfordshire\",\n        \"image\": \"grow\",\n        \"publishDate\": \"Configurable\",\n        \"author\": {\n          \"name\": \"Ms. Jamie Kshlerin\",\n          \"image\": \"District\",\n          \"email\": \"Marina.Bauch47@yahoo.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Delbert Conn\",\n          \"url\": \"evolve\",\n          \"logo\": \"Iowa\"\n        },\n        \"articleSection\": \"Computer\",\n        \"articleBody\": \"teal\",\n        \"description\": \"Programmable\",\n        \"slug\": \"Fantastic\",\n        \"url\": \"schemas\",\n        \"isDraft\": false,\n        \"id\": \"622f127e237a0a2ff00ae967\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n        \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -315,7 +1183,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"synthesize\",\n      \"alternativeHeadline\": \"Suriname\",\n      \"image\": \"Infrastructure\",\n      \"publishDate\": \"SDD\",\n      \"author\": {\n        \"name\": \"Rosie Nitzsche\",\n        \"image\": \"Unbranded\",\n        \"email\": \"Nikita67@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Jeff Cruickshank\",\n        \"url\": \"Officer\",\n        \"logo\": \"Bacon\"\n      },\n      \"articleSection\": \"Rustic\",\n      \"articleBody\": \"generate\",\n      \"description\": \"Stand-alone\",\n      \"slug\": \"Designer\",\n      \"url\": \"communities\",\n      \"isDraft\": false\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"copying\",\n      \"alternativeHeadline\": \"Bedfordshire\",\n      \"image\": \"grow\",\n      \"publishDate\": \"Configurable\",\n      \"author\": {\n        \"name\": \"Ms. Jamie Kshlerin\",\n        \"image\": \"District\",\n        \"email\": \"Marina.Bauch47@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Delbert Conn\",\n        \"url\": \"evolve\",\n        \"logo\": \"Iowa\"\n      },\n      \"articleSection\": \"Computer\",\n      \"articleBody\": \"teal\",\n      \"description\": \"Programmable\",\n      \"slug\": \"Fantastic\",\n      \"url\": \"schemas\",\n      \"isDraft\": false\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -346,7 +1214,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"synthesize\",\n      \"alternativeHeadline\": \"Suriname\",\n      \"image\": \"Infrastructure\",\n      \"publishDate\": \"SDD\",\n      \"author\": {\n        \"name\": \"Rosie Nitzsche\",\n        \"image\": \"Unbranded\",\n        \"email\": \"Nikita67@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Jeff Cruickshank\",\n        \"url\": \"Officer\",\n        \"logo\": \"Bacon\"\n      },\n      \"articleSection\": \"Rustic\",\n      \"articleBody\": \"generate\",\n      \"description\": \"Stand-alone\",\n      \"slug\": \"Designer\",\n      \"url\": \"communities\",\n      \"isDraft\": false,\n      \"id\": \"622f11f08c911a5abb0ce4c8\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n      \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"copying\",\n      \"alternativeHeadline\": \"Bedfordshire\",\n      \"image\": \"grow\",\n      \"publishDate\": \"Configurable\",\n      \"author\": {\n        \"name\": \"Ms. Jamie Kshlerin\",\n        \"image\": \"District\",\n        \"email\": \"Marina.Bauch47@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Delbert Conn\",\n        \"url\": \"evolve\",\n        \"logo\": \"Iowa\"\n      },\n      \"articleSection\": \"Computer\",\n      \"articleBody\": \"teal\",\n      \"description\": \"Programmable\",\n      \"slug\": \"Fantastic\",\n      \"url\": \"schemas\",\n      \"isDraft\": false,\n      \"id\": \"622f127e237a0a2ff00ae968\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n      \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -547,7 +1415,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"synthesize\",\n      \"alternativeHeadline\": \"Suriname\",\n      \"image\": \"Infrastructure\",\n      \"publishDate\": \"SDD\",\n      \"author\": {\n        \"name\": \"Rosie Nitzsche\",\n        \"image\": \"Unbranded\",\n        \"email\": \"Nikita67@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Jeff Cruickshank\",\n        \"url\": \"Officer\",\n        \"logo\": \"Bacon\"\n      },\n      \"articleSection\": \"Rustic\",\n      \"articleBody\": \"generate\",\n      \"description\": \"Stand-alone\",\n      \"slug\": \"Designer\",\n      \"url\": \"communities\",\n      \"isDraft\": false,\n      \"id\": \"622f11f08c911a5abb0ce4c9\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n      \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"copying\",\n      \"alternativeHeadline\": \"Bedfordshire\",\n      \"image\": \"grow\",\n      \"publishDate\": \"Configurable\",\n      \"author\": {\n        \"name\": \"Ms. Jamie Kshlerin\",\n        \"image\": \"District\",\n        \"email\": \"Marina.Bauch47@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Delbert Conn\",\n        \"url\": \"evolve\",\n        \"logo\": \"Iowa\"\n      },\n      \"articleSection\": \"Computer\",\n      \"articleBody\": \"teal\",\n      \"description\": \"Programmable\",\n      \"slug\": \"Fantastic\",\n      \"url\": \"schemas\",\n      \"isDraft\": false,\n      \"id\": \"622f127e237a0a2ff00ae969\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n      \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -705,7 +1573,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4ca\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n    \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae96a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n    \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -747,7 +1615,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"synthesize\",\n  \"alternativeHeadline\": \"Suriname\",\n  \"image\": \"Infrastructure\",\n  \"publishDate\": \"SDD\",\n  \"author\": {\n    \"name\": \"Rosie Nitzsche\",\n    \"image\": \"Unbranded\",\n    \"email\": \"Nikita67@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Jeff Cruickshank\",\n    \"url\": \"Officer\",\n    \"logo\": \"Bacon\"\n  },\n  \"articleSection\": \"Rustic\",\n  \"articleBody\": \"generate\",\n  \"description\": \"Stand-alone\",\n  \"slug\": \"Designer\",\n  \"url\": \"communities\",\n  \"isDraft\": false\n}"
+                  "raw": "{\n  \"title\": \"copying\",\n  \"alternativeHeadline\": \"Bedfordshire\",\n  \"image\": \"grow\",\n  \"publishDate\": \"Configurable\",\n  \"author\": {\n    \"name\": \"Ms. Jamie Kshlerin\",\n    \"image\": \"District\",\n    \"email\": \"Marina.Bauch47@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Delbert Conn\",\n    \"url\": \"evolve\",\n    \"logo\": \"Iowa\"\n  },\n  \"articleSection\": \"Computer\",\n  \"articleBody\": \"teal\",\n  \"description\": \"Programmable\",\n  \"slug\": \"Fantastic\",\n  \"url\": \"schemas\",\n  \"isDraft\": false\n}"
                 },
                 "description": "",
                 "auth": {
@@ -784,7 +1652,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4cb\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-19T15:57:03.275Z\",\n    \"updatedAt\": \"2022-10-29T16:48:23.110Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae96b\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:44:37.725Z\",\n    \"updatedAt\": \"2022-07-08T21:43:52.104Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -946,7 +1814,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4db\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n    \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae97b\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n    \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1013,7 +1881,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4dd\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n      \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae97d\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n      \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1049,7 +1917,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1080,7 +1948,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4d5\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n    \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae975\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n    \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1147,7 +2015,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Edd88\",\n        \"email\": \"Ambrose.Mohr@gmail.com\",\n        \"name\": \"Eula Stiedemann\",\n        \"mobileNo\": \"1-241-259-2598\",\n        \"userType\": 1,\n        \"id\": \"622f11f08c911a5abb0ce4d6\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n        \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Santos95\",\n        \"email\": \"Adelbert88@hotmail.com\",\n        \"name\": \"Miguel Spencer\",\n        \"mobileNo\": \"(991) 868-5901\",\n        \"userType\": 1,\n        \"id\": \"622f127e237a0a2ff00ae976\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n        \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1250,7 +2118,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"password\": \"DVgnWOFOg6FjTZS\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"password\": \"TUsMpknB0DmhloP\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1281,7 +2149,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4d7\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n      \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae977\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n      \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1482,7 +2350,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4d8\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n      \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae978\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n      \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1640,7 +2508,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4d9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n    \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae979\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n    \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1682,7 +2550,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1719,7 +2587,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4da\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n    \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae97a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n    \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1755,7 +2623,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -1786,7 +2654,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4dc\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-15T22:49:13.606Z\",\n      \"updatedAt\": \"2022-06-02T07:20:48.045Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae97c\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-08T04:45:03.382Z\",\n      \"updatedAt\": \"2022-05-24T18:12:01.629Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1933,7 +2801,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"id\": \"622f11f08c911a5abb0ce4de\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-05T16:17:38.021Z\",\n    \"updatedAt\": \"2022-07-17T20:03:45.211Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"id\": \"622f127e237a0a2ff00ae97e\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-22T17:42:07.705Z\",\n    \"updatedAt\": \"2022-10-15T02:13:41.137Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -1969,7 +2837,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\"\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\"\n}"
                 },
                 "description": "",
                 "auth": {}
@@ -1995,7 +2863,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"id\": \"622f11f08c911a5abb0ce4de\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-05T16:17:38.021Z\",\n    \"updatedAt\": \"2022-07-17T20:03:45.211Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"id\": \"622f127e237a0a2ff00ae97e\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-22T17:42:07.705Z\",\n    \"updatedAt\": \"2022-10-15T02:13:41.137Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2347,7 +3215,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dewey Collier\",\n    \"code\": \"Cheese\",\n    \"weight\": 762,\n    \"id\": \"622f11f08c911a5abb0ce4f2\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n    \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Tim Mohr\",\n    \"code\": \"Savings\",\n    \"weight\": 792,\n    \"id\": \"622f127e237a0a2ff00ae992\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n    \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2383,7 +3251,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"Dewey Collier\",\n  \"code\": \"Cheese\",\n  \"weight\": 762\n}"
+                  "raw": "{\n  \"name\": \"Tim Mohr\",\n  \"code\": \"Savings\",\n  \"weight\": 792\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2414,7 +3282,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dewey Collier\",\n    \"code\": \"Cheese\",\n    \"weight\": 762,\n    \"id\": \"622f11f08c911a5abb0ce4ec\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n    \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Tim Mohr\",\n    \"code\": \"Savings\",\n    \"weight\": 792,\n    \"id\": \"622f127e237a0a2ff00ae98c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n    \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2450,7 +3318,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Dewey Collier\",\n      \"code\": \"Cheese\",\n      \"weight\": 762\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Tim Mohr\",\n      \"code\": \"Savings\",\n      \"weight\": 792\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -2481,7 +3349,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Dewey Collier\",\n      \"code\": \"Cheese\",\n      \"weight\": 762,\n      \"id\": \"622f11f08c911a5abb0ce4ed\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n      \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Tim Mohr\",\n      \"code\": \"Savings\",\n      \"weight\": 792,\n      \"id\": \"622f127e237a0a2ff00ae98d\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n      \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2548,7 +3416,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Dewey Collier\",\n        \"code\": \"Cheese\",\n        \"weight\": 762,\n        \"id\": \"622f11f08c911a5abb0ce4ee\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n        \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Tim Mohr\",\n        \"code\": \"Savings\",\n        \"weight\": 792,\n        \"id\": \"622f127e237a0a2ff00ae98e\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n        \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2749,7 +3617,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Dewey Collier\",\n      \"code\": \"Cheese\",\n      \"weight\": 762,\n      \"id\": \"622f11f08c911a5abb0ce4ef\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n      \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Tim Mohr\",\n      \"code\": \"Savings\",\n      \"weight\": 792,\n      \"id\": \"622f127e237a0a2ff00ae98f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n      \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -2974,7 +3842,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dewey Collier\",\n    \"code\": \"Cheese\",\n    \"weight\": 762,\n    \"id\": \"622f11f08c911a5abb0ce4f0\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n    \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Tim Mohr\",\n    \"code\": \"Savings\",\n    \"weight\": 792,\n    \"id\": \"622f127e237a0a2ff00ae990\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n    \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3016,7 +3884,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"Dewey Collier\",\n  \"code\": \"Cheese\",\n  \"weight\": 762\n}"
+                  "raw": "{\n  \"name\": \"Tim Mohr\",\n  \"code\": \"Savings\",\n  \"weight\": 792\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3053,7 +3921,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Dewey Collier\",\n    \"code\": \"Cheese\",\n    \"weight\": 762,\n    \"id\": \"622f11f08c911a5abb0ce4f1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-10T15:38:33.085Z\",\n    \"updatedAt\": \"2023-02-09T23:29:01.547Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Tim Mohr\",\n    \"code\": \"Savings\",\n    \"weight\": 792,\n    \"id\": \"622f127e237a0a2ff00ae991\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-19T10:12:17.549Z\",\n    \"updatedAt\": \"2022-12-25T15:26:03.454Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3215,7 +4083,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"SSL\",\n    \"method\": \"Books\",\n    \"uri\": \"Tasty\",\n    \"id\": \"622f11f08c911a5abb0ce4fa\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n    \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"GB\",\n    \"method\": \"connecting\",\n    \"uri\": \"schemas\",\n    \"id\": \"622f127e237a0a2ff00ae99a\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n    \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3251,7 +4119,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"route_name\": \"SSL\",\n  \"method\": \"Books\",\n  \"uri\": \"Tasty\"\n}"
+                  "raw": "{\n  \"route_name\": \"GB\",\n  \"method\": \"connecting\",\n  \"uri\": \"schemas\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3282,7 +4150,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"SSL\",\n    \"method\": \"Books\",\n    \"uri\": \"Tasty\",\n    \"id\": \"622f11f08c911a5abb0ce4f4\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n    \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"GB\",\n    \"method\": \"connecting\",\n    \"uri\": \"schemas\",\n    \"id\": \"622f127e237a0a2ff00ae994\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n    \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3318,7 +4186,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"SSL\",\n      \"method\": \"Books\",\n      \"uri\": \"Tasty\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"GB\",\n      \"method\": \"connecting\",\n      \"uri\": \"schemas\"\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3349,7 +4217,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"SSL\",\n      \"method\": \"Books\",\n      \"uri\": \"Tasty\",\n      \"id\": \"622f11f08c911a5abb0ce4f5\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n      \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"GB\",\n      \"method\": \"connecting\",\n      \"uri\": \"schemas\",\n      \"id\": \"622f127e237a0a2ff00ae995\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n      \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3416,7 +4284,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"route_name\": \"SSL\",\n        \"method\": \"Books\",\n        \"uri\": \"Tasty\",\n        \"id\": \"622f11f08c911a5abb0ce4f6\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n        \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"route_name\": \"GB\",\n        \"method\": \"connecting\",\n        \"uri\": \"schemas\",\n        \"id\": \"622f127e237a0a2ff00ae996\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n        \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3617,7 +4485,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"SSL\",\n      \"method\": \"Books\",\n      \"uri\": \"Tasty\",\n      \"id\": \"622f11f08c911a5abb0ce4f7\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n      \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"route_name\": \"GB\",\n      \"method\": \"connecting\",\n      \"uri\": \"schemas\",\n      \"id\": \"622f127e237a0a2ff00ae997\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n      \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3842,7 +4710,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"SSL\",\n    \"method\": \"Books\",\n    \"uri\": \"Tasty\",\n    \"id\": \"622f11f08c911a5abb0ce4f8\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n    \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"GB\",\n    \"method\": \"connecting\",\n    \"uri\": \"schemas\",\n    \"id\": \"622f127e237a0a2ff00ae998\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n    \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -3884,7 +4752,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"route_name\": \"SSL\",\n  \"method\": \"Books\",\n  \"uri\": \"Tasty\"\n}"
+                  "raw": "{\n  \"route_name\": \"GB\",\n  \"method\": \"connecting\",\n  \"uri\": \"schemas\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -3921,7 +4789,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"SSL\",\n    \"method\": \"Books\",\n    \"uri\": \"Tasty\",\n    \"id\": \"622f11f08c911a5abb0ce4f9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-01-14T22:20:37.899Z\",\n    \"updatedAt\": \"2022-12-31T10:13:57.142Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"GB\",\n    \"method\": \"connecting\",\n    \"uri\": \"schemas\",\n    \"id\": \"622f127e237a0a2ff00ae999\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-04T11:42:04.150Z\",\n    \"updatedAt\": \"2022-04-15T13:38:20.821Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4083,7 +4951,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n    \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n    \"id\": \"622f11f08c911a5abb0ce504\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n    \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f127e237a0a2ff00ae99b\",\n    \"roleId\": \"622f127e237a0a2ff00ae99c\",\n    \"id\": \"622f127e237a0a2ff00ae9a4\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n    \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4119,7 +4987,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n  \"roleId\": \"622f11f08c911a5abb0ce4fc\"\n}"
+                  "raw": "{\n  \"routeId\": \"622f127e237a0a2ff00ae99b\",\n  \"roleId\": \"622f127e237a0a2ff00ae99c\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4150,7 +5018,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n    \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n    \"id\": \"622f11f08c911a5abb0ce4fe\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n    \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f127e237a0a2ff00ae99b\",\n    \"roleId\": \"622f127e237a0a2ff00ae99c\",\n    \"id\": \"622f127e237a0a2ff00ae99e\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n    \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4186,7 +5054,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n      \"roleId\": \"622f11f08c911a5abb0ce4fc\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"622f127e237a0a2ff00ae99b\",\n      \"roleId\": \"622f127e237a0a2ff00ae99c\"\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4217,7 +5085,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n      \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n      \"id\": \"622f11f08c911a5abb0ce4ff\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n      \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"622f127e237a0a2ff00ae99b\",\n      \"roleId\": \"622f127e237a0a2ff00ae99c\",\n      \"id\": \"622f127e237a0a2ff00ae99f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n      \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4284,7 +5152,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n        \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n        \"id\": \"622f11f08c911a5abb0ce500\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n        \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"routeId\": \"622f127e237a0a2ff00ae99b\",\n        \"roleId\": \"622f127e237a0a2ff00ae99c\",\n        \"id\": \"622f127e237a0a2ff00ae9a0\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n        \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4485,7 +5353,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n      \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n      \"id\": \"622f11f08c911a5abb0ce501\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n      \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"routeId\": \"622f127e237a0a2ff00ae99b\",\n      \"roleId\": \"622f127e237a0a2ff00ae99c\",\n      \"id\": \"622f127e237a0a2ff00ae9a1\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n      \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4710,7 +5578,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n    \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n    \"id\": \"622f11f08c911a5abb0ce502\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n    \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f127e237a0a2ff00ae99b\",\n    \"roleId\": \"622f127e237a0a2ff00ae99c\",\n    \"id\": \"622f127e237a0a2ff00ae9a2\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n    \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4752,7 +5620,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n  \"roleId\": \"622f11f08c911a5abb0ce4fc\"\n}"
+                  "raw": "{\n  \"routeId\": \"622f127e237a0a2ff00ae99b\",\n  \"roleId\": \"622f127e237a0a2ff00ae99c\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -4789,7 +5657,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f11f08c911a5abb0ce4fb\",\n    \"roleId\": \"622f11f08c911a5abb0ce4fc\",\n    \"id\": \"622f11f08c911a5abb0ce503\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-05-31T08:38:16.996Z\",\n    \"updatedAt\": \"2022-05-23T09:25:46.091Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"622f127e237a0a2ff00ae99b\",\n    \"roleId\": \"622f127e237a0a2ff00ae99c\",\n    \"id\": \"622f127e237a0a2ff00ae9a3\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-11-24T05:39:40.798Z\",\n    \"updatedAt\": \"2022-11-29T03:15:08.881Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4951,7 +5819,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f11f08c911a5abb0ce505\",\n    \"roleId\": \"622f11f08c911a5abb0ce506\",\n    \"id\": \"622f11f08c911a5abb0ce50e\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n    \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f127e237a0a2ff00ae9a5\",\n    \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n    \"id\": \"622f127e237a0a2ff00ae9ae\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n    \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -4987,7 +5855,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"userId\": \"622f11f08c911a5abb0ce505\",\n  \"roleId\": \"622f11f08c911a5abb0ce506\"\n}"
+                  "raw": "{\n  \"userId\": \"622f127e237a0a2ff00ae9a5\",\n  \"roleId\": \"622f127e237a0a2ff00ae9a6\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -5018,7 +5886,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f11f08c911a5abb0ce505\",\n    \"roleId\": \"622f11f08c911a5abb0ce506\",\n    \"id\": \"622f11f08c911a5abb0ce508\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n    \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f127e237a0a2ff00ae9a5\",\n    \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n    \"id\": \"622f127e237a0a2ff00ae9a8\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n    \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5054,7 +5922,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"userId\": \"622f11f08c911a5abb0ce505\",\n      \"roleId\": \"622f11f08c911a5abb0ce506\"\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"userId\": \"622f127e237a0a2ff00ae9a5\",\n      \"roleId\": \"622f127e237a0a2ff00ae9a6\"\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -5085,7 +5953,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"622f11f08c911a5abb0ce505\",\n      \"roleId\": \"622f11f08c911a5abb0ce506\",\n      \"id\": \"622f11f08c911a5abb0ce509\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n      \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"622f127e237a0a2ff00ae9a5\",\n      \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n      \"id\": \"622f127e237a0a2ff00ae9a9\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n      \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5152,7 +6020,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"userId\": \"622f11f08c911a5abb0ce505\",\n        \"roleId\": \"622f11f08c911a5abb0ce506\",\n        \"id\": \"622f11f08c911a5abb0ce50a\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n        \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"userId\": \"622f127e237a0a2ff00ae9a5\",\n        \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n        \"id\": \"622f127e237a0a2ff00ae9aa\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n        \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5353,7 +6221,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"622f11f08c911a5abb0ce505\",\n      \"roleId\": \"622f11f08c911a5abb0ce506\",\n      \"id\": \"622f11f08c911a5abb0ce50b\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n      \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"userId\": \"622f127e237a0a2ff00ae9a5\",\n      \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n      \"id\": \"622f127e237a0a2ff00ae9ab\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n      \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5578,7 +6446,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f11f08c911a5abb0ce505\",\n    \"roleId\": \"622f11f08c911a5abb0ce506\",\n    \"id\": \"622f11f08c911a5abb0ce50c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n    \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f127e237a0a2ff00ae9a5\",\n    \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n    \"id\": \"622f127e237a0a2ff00ae9ac\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n    \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5620,7 +6488,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"userId\": \"622f11f08c911a5abb0ce505\",\n  \"roleId\": \"622f11f08c911a5abb0ce506\"\n}"
+                  "raw": "{\n  \"userId\": \"622f127e237a0a2ff00ae9a5\",\n  \"roleId\": \"622f127e237a0a2ff00ae9a6\"\n}"
                 },
                 "description": "",
                 "auth": {
@@ -5657,7 +6525,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f11f08c911a5abb0ce505\",\n    \"roleId\": \"622f11f08c911a5abb0ce506\",\n    \"id\": \"622f11f08c911a5abb0ce50d\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-12-02T20:17:45.952Z\",\n    \"updatedAt\": \"2022-11-15T22:01:00.955Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"622f127e237a0a2ff00ae9a5\",\n    \"roleId\": \"622f127e237a0a2ff00ae9a6\",\n    \"id\": \"622f127e237a0a2ff00ae9ad\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-24T09:51:40.680Z\",\n    \"updatedAt\": \"2022-06-03T00:22:52.573Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5757,6 +6625,922 @@
       "description": "device APIs",
       "item": [
         {
+          "name": "Event",
+          "description": "Event Model APIs",
+          "item": [
+            {
+              "name": "getEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEvent_response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae964\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n    \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/create",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "create"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Ruben Swift\",\n  \"description\": \"orange\",\n  \"address\": {\n    \"line1\": \"Supervisor\",\n    \"line2\": \"deposit\",\n    \"city\": \"Nigeria\",\n    \"country\": \"initiative\",\n    \"state\": \"functionalities\",\n    \"pincode\": \"open-source\",\n    \"lat\": 28,\n    \"lng\": 889\n  },\n  \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n  \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Andrea Weber\",\n      \"image\": \"National\",\n      \"email\": \"Zoey_Hansen@hotmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Wilma Bogan\",\n    \"image\": \"cross-platform\",\n    \"email\": \"Verner.Howell55@yahoo.com\",\n    \"url\": \"Account\"\n  },\n  \"image\": \"USB\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "addEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/create",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "create"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae95e\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n    \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/list",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "list"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "findAllEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/list",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "list"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Ruben Swift\",\n        \"description\": \"orange\",\n        \"address\": {\n          \"line1\": \"Supervisor\",\n          \"line2\": \"deposit\",\n          \"city\": \"Nigeria\",\n          \"country\": \"initiative\",\n          \"state\": \"functionalities\",\n          \"pincode\": \"open-source\",\n          \"lat\": 28,\n          \"lng\": 889\n        },\n        \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n        \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n        \"speakers\": [\n          {\n            \"_id\": false,\n            \"name\": \"Andrea Weber\",\n            \"image\": \"National\",\n            \"email\": \"Zoey_Hansen@hotmail.com\"\n          }\n        ],\n        \"organizer\": {\n          \"name\": \"Wilma Bogan\",\n          \"image\": \"cross-platform\",\n          \"email\": \"Verner.Howell55@yahoo.com\",\n          \"url\": \"Account\"\n        },\n        \"image\": \"USB\",\n        \"id\": \"622f127e237a0a2ff00ae95f\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n        \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getEventCount",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/count",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "count"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "getEventCount_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/count",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"totalRecords\": 10\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/addBulk",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "addBulk"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Ruben Swift\",\n      \"description\": \"orange\",\n      \"address\": {\n        \"line1\": \"Supervisor\",\n        \"line2\": \"deposit\",\n        \"city\": \"Nigeria\",\n        \"country\": \"initiative\",\n        \"state\": \"functionalities\",\n        \"pincode\": \"open-source\",\n        \"lat\": 28,\n        \"lng\": 889\n      },\n      \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n      \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Andrea Weber\",\n          \"image\": \"National\",\n          \"email\": \"Zoey_Hansen@hotmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Wilma Bogan\",\n        \"image\": \"cross-platform\",\n        \"email\": \"Verner.Howell55@yahoo.com\",\n        \"url\": \"Account\"\n      },\n      \"image\": \"USB\"\n    }\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "insertBulkEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/addBulk",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "addBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Ruben Swift\",\n      \"description\": \"orange\",\n      \"address\": {\n        \"line1\": \"Supervisor\",\n        \"line2\": \"deposit\",\n        \"city\": \"Nigeria\",\n        \"country\": \"initiative\",\n        \"state\": \"functionalities\",\n        \"pincode\": \"open-source\",\n        \"lat\": 28,\n        \"lng\": 889\n      },\n      \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n      \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Andrea Weber\",\n          \"image\": \"National\",\n          \"email\": \"Zoey_Hansen@hotmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Wilma Bogan\",\n        \"image\": \"cross-platform\",\n        \"email\": \"Verner.Howell55@yahoo.com\",\n        \"url\": \"Account\"\n      },\n      \"image\": \"USB\",\n      \"id\": \"622f127e237a0a2ff00ae960\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n      \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteManyEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/deleteMany",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "deleteMany"
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/deleteMany",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "deleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"ok\": 1,\n    \"deletedCount\": 2\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/softDeleteMany",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "softDeleteMany"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteManyEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/softDeleteMany",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "softDeleteMany"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 2,\n    \"nModified\": 2,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/updateBulk",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "updateBulk"
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateBulkEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/updateBulk",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "updateBulk"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"name\": \"Ruben Swift\",\n      \"description\": \"orange\",\n      \"address\": {\n        \"line1\": \"Supervisor\",\n        \"line2\": \"deposit\",\n        \"city\": \"Nigeria\",\n        \"country\": \"initiative\",\n        \"state\": \"functionalities\",\n        \"pincode\": \"open-source\",\n        \"lat\": 28,\n        \"lng\": 889\n      },\n      \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n      \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n      \"speakers\": [\n        {\n          \"_id\": false,\n          \"name\": \"Andrea Weber\",\n          \"image\": \"National\",\n          \"email\": \"Zoey_Hansen@hotmail.com\"\n        }\n      ],\n      \"organizer\": {\n        \"name\": \"Wilma Bogan\",\n        \"image\": \"cross-platform\",\n        \"email\": \"Verner.Howell55@yahoo.com\",\n        \"url\": \"Account\"\n      },\n      \"image\": \"USB\",\n      \"id\": \"622f127e237a0a2ff00ae961\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n      \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n    }\n  ]\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/softDelete/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "softDelete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "softDeleteEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/softDelete/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "softDelete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"nModified\": 1,\n    \"ok\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/partial-update/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "partial-update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "partialupdateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/partial-update/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "partial-update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae962\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n    \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/update/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "update",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Ruben Swift\",\n  \"description\": \"orange\",\n  \"address\": {\n    \"line1\": \"Supervisor\",\n    \"line2\": \"deposit\",\n    \"city\": \"Nigeria\",\n    \"country\": \"initiative\",\n    \"state\": \"functionalities\",\n    \"pincode\": \"open-source\",\n    \"lat\": 28,\n    \"lng\": 889\n  },\n  \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n  \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n  \"speakers\": [\n    {\n      \"_id\": false,\n      \"name\": \"Andrea Weber\",\n      \"image\": \"National\",\n      \"email\": \"Zoey_Hansen@hotmail.com\"\n    }\n  ],\n  \"organizer\": {\n    \"name\": \"Wilma Bogan\",\n    \"image\": \"cross-platform\",\n    \"email\": \"Verner.Howell55@yahoo.com\",\n    \"url\": \"Account\"\n  },\n  \"image\": \"USB\"\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "updateEvent_response",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/update/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "update",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Ruben Swift\",\n    \"description\": \"orange\",\n    \"address\": {\n      \"line1\": \"Supervisor\",\n      \"line2\": \"deposit\",\n      \"city\": \"Nigeria\",\n      \"country\": \"initiative\",\n      \"state\": \"functionalities\",\n      \"pincode\": \"open-source\",\n      \"lat\": 28,\n      \"lng\": 889\n    },\n    \"startDateTime\": \"2022-11-25T00:58:10.340Z\",\n    \"endDateTime\": \"2022-04-24T09:01:38.298Z\",\n    \"speakers\": [\n      {\n        \"_id\": false,\n        \"name\": \"Andrea Weber\",\n        \"image\": \"National\",\n        \"email\": \"Zoey_Hansen@hotmail.com\"\n      }\n    ],\n    \"organizer\": {\n      \"name\": \"Wilma Bogan\",\n      \"image\": \"cross-platform\",\n      \"email\": \"Verner.Howell55@yahoo.com\",\n      \"url\": \"Account\"\n    },\n    \"image\": \"USB\",\n    \"id\": \"622f127e237a0a2ff00ae963\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-17T18:11:37.237Z\",\n    \"updatedAt\": \"2022-12-07T01:08:38.245Z\"\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "deleteEvent",
+              "request": {
+                "url": {
+                  "raw": "{{url}}/device/api/v1/event/delete/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "device",
+                    "api",
+                    "v1",
+                    "event",
+                    "delete",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isWarning\": true\n}"
+                },
+                "description": "",
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "token": "{{token}}"
+                  }
+                }
+              },
+              "response": [
+                {
+                  "name": "deleteEvent_response",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/device/api/v1/event/delete/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "device",
+                        "api",
+                        "v1",
+                        "event",
+                        "delete",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"n\": 1,\n    \"ok\": 1,\n    \"deletedCount\": 1\n  }\n}",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
           "name": "Blog",
           "description": "Blog Model APIs",
           "item": [
@@ -5829,7 +7613,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4d3\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n    \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae973\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n    \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5867,7 +7651,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"synthesize\",\n  \"alternativeHeadline\": \"Suriname\",\n  \"image\": \"Infrastructure\",\n  \"publishDate\": \"SDD\",\n  \"author\": {\n    \"name\": \"Rosie Nitzsche\",\n    \"image\": \"Unbranded\",\n    \"email\": \"Nikita67@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Jeff Cruickshank\",\n    \"url\": \"Officer\",\n    \"logo\": \"Bacon\"\n  },\n  \"articleSection\": \"Rustic\",\n  \"articleBody\": \"generate\",\n  \"description\": \"Stand-alone\",\n  \"slug\": \"Designer\",\n  \"url\": \"communities\",\n  \"isDraft\": false\n}"
+                  "raw": "{\n  \"title\": \"copying\",\n  \"alternativeHeadline\": \"Bedfordshire\",\n  \"image\": \"grow\",\n  \"publishDate\": \"Configurable\",\n  \"author\": {\n    \"name\": \"Ms. Jamie Kshlerin\",\n    \"image\": \"District\",\n    \"email\": \"Marina.Bauch47@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Delbert Conn\",\n    \"url\": \"evolve\",\n    \"logo\": \"Iowa\"\n  },\n  \"articleSection\": \"Computer\",\n  \"articleBody\": \"teal\",\n  \"description\": \"Programmable\",\n  \"slug\": \"Fantastic\",\n  \"url\": \"schemas\",\n  \"isDraft\": false\n}"
                 },
                 "description": "",
                 "auth": {
@@ -5900,7 +7684,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4cd\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n    \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae96d\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n    \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -5971,7 +7755,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"synthesize\",\n        \"alternativeHeadline\": \"Suriname\",\n        \"image\": \"Infrastructure\",\n        \"publishDate\": \"SDD\",\n        \"author\": {\n          \"name\": \"Rosie Nitzsche\",\n          \"image\": \"Unbranded\",\n          \"email\": \"Nikita67@gmail.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Jeff Cruickshank\",\n          \"url\": \"Officer\",\n          \"logo\": \"Bacon\"\n        },\n        \"articleSection\": \"Rustic\",\n        \"articleBody\": \"generate\",\n        \"description\": \"Stand-alone\",\n        \"slug\": \"Designer\",\n        \"url\": \"communities\",\n        \"isDraft\": false,\n        \"id\": \"622f11f08c911a5abb0ce4ce\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n        \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"title\": \"copying\",\n        \"alternativeHeadline\": \"Bedfordshire\",\n        \"image\": \"grow\",\n        \"publishDate\": \"Configurable\",\n        \"author\": {\n          \"name\": \"Ms. Jamie Kshlerin\",\n          \"image\": \"District\",\n          \"email\": \"Marina.Bauch47@yahoo.com\"\n        },\n        \"publisher\": {\n          \"name\": \"Delbert Conn\",\n          \"url\": \"evolve\",\n          \"logo\": \"Iowa\"\n        },\n        \"articleSection\": \"Computer\",\n        \"articleBody\": \"teal\",\n        \"description\": \"Programmable\",\n        \"slug\": \"Fantastic\",\n        \"url\": \"schemas\",\n        \"isDraft\": false,\n        \"id\": \"622f127e237a0a2ff00ae96e\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n        \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6080,7 +7864,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"synthesize\",\n      \"alternativeHeadline\": \"Suriname\",\n      \"image\": \"Infrastructure\",\n      \"publishDate\": \"SDD\",\n      \"author\": {\n        \"name\": \"Rosie Nitzsche\",\n        \"image\": \"Unbranded\",\n        \"email\": \"Nikita67@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Jeff Cruickshank\",\n        \"url\": \"Officer\",\n        \"logo\": \"Bacon\"\n      },\n      \"articleSection\": \"Rustic\",\n      \"articleBody\": \"generate\",\n      \"description\": \"Stand-alone\",\n      \"slug\": \"Designer\",\n      \"url\": \"communities\",\n      \"isDraft\": false\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"title\": \"copying\",\n      \"alternativeHeadline\": \"Bedfordshire\",\n      \"image\": \"grow\",\n      \"publishDate\": \"Configurable\",\n      \"author\": {\n        \"name\": \"Ms. Jamie Kshlerin\",\n        \"image\": \"District\",\n        \"email\": \"Marina.Bauch47@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Delbert Conn\",\n        \"url\": \"evolve\",\n        \"logo\": \"Iowa\"\n      },\n      \"articleSection\": \"Computer\",\n      \"articleBody\": \"teal\",\n      \"description\": \"Programmable\",\n      \"slug\": \"Fantastic\",\n      \"url\": \"schemas\",\n      \"isDraft\": false\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -6113,7 +7897,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"synthesize\",\n      \"alternativeHeadline\": \"Suriname\",\n      \"image\": \"Infrastructure\",\n      \"publishDate\": \"SDD\",\n      \"author\": {\n        \"name\": \"Rosie Nitzsche\",\n        \"image\": \"Unbranded\",\n        \"email\": \"Nikita67@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Jeff Cruickshank\",\n        \"url\": \"Officer\",\n        \"logo\": \"Bacon\"\n      },\n      \"articleSection\": \"Rustic\",\n      \"articleBody\": \"generate\",\n      \"description\": \"Stand-alone\",\n      \"slug\": \"Designer\",\n      \"url\": \"communities\",\n      \"isDraft\": false,\n      \"id\": \"622f11f08c911a5abb0ce4cf\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n      \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"copying\",\n      \"alternativeHeadline\": \"Bedfordshire\",\n      \"image\": \"grow\",\n      \"publishDate\": \"Configurable\",\n      \"author\": {\n        \"name\": \"Ms. Jamie Kshlerin\",\n        \"image\": \"District\",\n        \"email\": \"Marina.Bauch47@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Delbert Conn\",\n        \"url\": \"evolve\",\n        \"logo\": \"Iowa\"\n      },\n      \"articleSection\": \"Computer\",\n      \"articleBody\": \"teal\",\n      \"description\": \"Programmable\",\n      \"slug\": \"Fantastic\",\n      \"url\": \"schemas\",\n      \"isDraft\": false,\n      \"id\": \"622f127e237a0a2ff00ae96f\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n      \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6326,7 +8110,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"synthesize\",\n      \"alternativeHeadline\": \"Suriname\",\n      \"image\": \"Infrastructure\",\n      \"publishDate\": \"SDD\",\n      \"author\": {\n        \"name\": \"Rosie Nitzsche\",\n        \"image\": \"Unbranded\",\n        \"email\": \"Nikita67@gmail.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Jeff Cruickshank\",\n        \"url\": \"Officer\",\n        \"logo\": \"Bacon\"\n      },\n      \"articleSection\": \"Rustic\",\n      \"articleBody\": \"generate\",\n      \"description\": \"Stand-alone\",\n      \"slug\": \"Designer\",\n      \"url\": \"communities\",\n      \"isDraft\": false,\n      \"id\": \"622f11f08c911a5abb0ce4d0\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n      \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"title\": \"copying\",\n      \"alternativeHeadline\": \"Bedfordshire\",\n      \"image\": \"grow\",\n      \"publishDate\": \"Configurable\",\n      \"author\": {\n        \"name\": \"Ms. Jamie Kshlerin\",\n        \"image\": \"District\",\n        \"email\": \"Marina.Bauch47@yahoo.com\"\n      },\n      \"publisher\": {\n        \"name\": \"Delbert Conn\",\n        \"url\": \"evolve\",\n        \"logo\": \"Iowa\"\n      },\n      \"articleSection\": \"Computer\",\n      \"articleBody\": \"teal\",\n      \"description\": \"Programmable\",\n      \"slug\": \"Fantastic\",\n      \"url\": \"schemas\",\n      \"isDraft\": false,\n      \"id\": \"622f127e237a0a2ff00ae970\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n      \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6492,7 +8276,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4d1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n    \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae971\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n    \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6536,7 +8320,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"title\": \"synthesize\",\n  \"alternativeHeadline\": \"Suriname\",\n  \"image\": \"Infrastructure\",\n  \"publishDate\": \"SDD\",\n  \"author\": {\n    \"name\": \"Rosie Nitzsche\",\n    \"image\": \"Unbranded\",\n    \"email\": \"Nikita67@gmail.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Jeff Cruickshank\",\n    \"url\": \"Officer\",\n    \"logo\": \"Bacon\"\n  },\n  \"articleSection\": \"Rustic\",\n  \"articleBody\": \"generate\",\n  \"description\": \"Stand-alone\",\n  \"slug\": \"Designer\",\n  \"url\": \"communities\",\n  \"isDraft\": false\n}"
+                  "raw": "{\n  \"title\": \"copying\",\n  \"alternativeHeadline\": \"Bedfordshire\",\n  \"image\": \"grow\",\n  \"publishDate\": \"Configurable\",\n  \"author\": {\n    \"name\": \"Ms. Jamie Kshlerin\",\n    \"image\": \"District\",\n    \"email\": \"Marina.Bauch47@yahoo.com\"\n  },\n  \"publisher\": {\n    \"name\": \"Delbert Conn\",\n    \"url\": \"evolve\",\n    \"logo\": \"Iowa\"\n  },\n  \"articleSection\": \"Computer\",\n  \"articleBody\": \"teal\",\n  \"description\": \"Programmable\",\n  \"slug\": \"Fantastic\",\n  \"url\": \"schemas\",\n  \"isDraft\": false\n}"
                 },
                 "description": "",
                 "auth": {
@@ -6575,7 +8359,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"synthesize\",\n    \"alternativeHeadline\": \"Suriname\",\n    \"image\": \"Infrastructure\",\n    \"publishDate\": \"SDD\",\n    \"author\": {\n      \"name\": \"Rosie Nitzsche\",\n      \"image\": \"Unbranded\",\n      \"email\": \"Nikita67@gmail.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Jeff Cruickshank\",\n      \"url\": \"Officer\",\n      \"logo\": \"Bacon\"\n    },\n    \"articleSection\": \"Rustic\",\n    \"articleBody\": \"generate\",\n    \"description\": \"Stand-alone\",\n    \"slug\": \"Designer\",\n    \"url\": \"communities\",\n    \"isDraft\": false,\n    \"id\": \"622f11f08c911a5abb0ce4d2\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-06-11T05:19:36.830Z\",\n    \"updatedAt\": \"2022-07-11T07:43:32.761Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"title\": \"copying\",\n    \"alternativeHeadline\": \"Bedfordshire\",\n    \"image\": \"grow\",\n    \"publishDate\": \"Configurable\",\n    \"author\": {\n      \"name\": \"Ms. Jamie Kshlerin\",\n      \"image\": \"District\",\n      \"email\": \"Marina.Bauch47@yahoo.com\"\n    },\n    \"publisher\": {\n      \"name\": \"Delbert Conn\",\n      \"url\": \"evolve\",\n      \"logo\": \"Iowa\"\n    },\n    \"articleSection\": \"Computer\",\n    \"articleBody\": \"teal\",\n    \"description\": \"Programmable\",\n    \"slug\": \"Fantastic\",\n    \"url\": \"schemas\",\n    \"isDraft\": false,\n    \"id\": \"622f127e237a0a2ff00ae972\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-26T18:02:07.131Z\",\n    \"updatedAt\": \"2022-12-09T10:23:30.083Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6745,7 +8529,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4e5\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n    \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae985\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n    \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6816,7 +8600,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4e7\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n      \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae987\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n      \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6854,7 +8638,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -6887,7 +8671,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4df\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n    \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae97f\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n    \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -6958,7 +8742,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Edd88\",\n        \"email\": \"Ambrose.Mohr@gmail.com\",\n        \"name\": \"Eula Stiedemann\",\n        \"mobileNo\": \"1-241-259-2598\",\n        \"userType\": 1,\n        \"id\": \"622f11f08c911a5abb0ce4e0\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n        \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Santos95\",\n        \"email\": \"Adelbert88@hotmail.com\",\n        \"name\": \"Miguel Spencer\",\n        \"mobileNo\": \"(991) 868-5901\",\n        \"userType\": 1,\n        \"id\": \"622f127e237a0a2ff00ae980\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n        \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7067,7 +8851,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"password\": \"DVgnWOFOg6FjTZS\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"password\": \"TUsMpknB0DmhloP\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1\n    }\n  ]\n}"
                 },
                 "description": "",
                 "auth": {
@@ -7100,7 +8884,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4e1\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n      \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae981\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n      \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7313,7 +9097,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4e2\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n      \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae982\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n      \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7479,7 +9263,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4e3\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n    \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae983\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n    \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7523,7 +9307,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -7562,7 +9346,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"userType\": 1,\n    \"id\": \"622f11f08c911a5abb0ce4e4\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n    \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"userType\": 1,\n    \"id\": \"622f127e237a0a2ff00ae984\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n    \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7600,7 +9384,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\",\n  \"userType\": 1\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\",\n  \"userType\": 1\n}"
                 },
                 "description": "",
                 "auth": {
@@ -7633,7 +9417,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Edd88\",\n      \"email\": \"Ambrose.Mohr@gmail.com\",\n      \"name\": \"Eula Stiedemann\",\n      \"mobileNo\": \"1-241-259-2598\",\n      \"userType\": 1,\n      \"id\": \"622f11f08c911a5abb0ce4e6\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-04-17T04:04:58.710Z\",\n      \"updatedAt\": \"2022-10-08T16:22:02.631Z\"\n    }\n  ]\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n    {\n      \"username\": \"Santos95\",\n      \"email\": \"Adelbert88@hotmail.com\",\n      \"name\": \"Miguel Spencer\",\n      \"mobileNo\": \"(991) 868-5901\",\n      \"userType\": 1,\n      \"id\": \"622f127e237a0a2ff00ae986\",\n      \"isDeleted\": false,\n      \"isActive\": true,\n      \"createdAt\": \"2022-10-15T13:07:41.281Z\",\n      \"updatedAt\": \"2022-10-13T04:58:45.391Z\"\n    }\n  ]\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7784,7 +9568,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"id\": \"622f11f08c911a5abb0ce4e8\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-28T02:40:46.891Z\",\n    \"updatedAt\": \"2023-02-04T16:49:00.261Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"id\": \"622f127e237a0a2ff00ae988\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-31T00:02:59.922Z\",\n    \"updatedAt\": \"2022-04-07T15:11:38.479Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",
@@ -7820,7 +9604,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Edd88\",\n  \"password\": \"DVgnWOFOg6FjTZS\",\n  \"email\": \"Ambrose.Mohr@gmail.com\",\n  \"name\": \"Eula Stiedemann\",\n  \"mobileNo\": \"1-241-259-2598\"\n}"
+                  "raw": "{\n  \"username\": \"Santos95\",\n  \"password\": \"TUsMpknB0DmhloP\",\n  \"email\": \"Adelbert88@hotmail.com\",\n  \"name\": \"Miguel Spencer\",\n  \"mobileNo\": \"(991) 868-5901\"\n}"
                 },
                 "description": "",
                 "auth": {}
@@ -7846,7 +9630,7 @@
                   "status": "OK",
                   "code": 200,
                   "_postman_previewlanguage": "json",
-                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Edd88\",\n    \"email\": \"Ambrose.Mohr@gmail.com\",\n    \"name\": \"Eula Stiedemann\",\n    \"mobileNo\": \"1-241-259-2598\",\n    \"id\": \"622f11f08c911a5abb0ce4e8\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-02-28T02:40:46.891Z\",\n    \"updatedAt\": \"2023-02-04T16:49:00.261Z\"\n  }\n}",
+                  "body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Santos95\",\n    \"email\": \"Adelbert88@hotmail.com\",\n    \"name\": \"Miguel Spencer\",\n    \"mobileNo\": \"(991) 868-5901\",\n    \"id\": \"622f127e237a0a2ff00ae988\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2022-08-31T00:02:59.922Z\",\n    \"updatedAt\": \"2022-04-07T15:11:38.479Z\"\n  }\n}",
                   "header": [
                     {
                       "key": "Content-Type",

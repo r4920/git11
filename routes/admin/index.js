@@ -6,6 +6,7 @@
 const express =  require('express');
 const router =  express.Router();
 router.use('/admin/auth',require('./auth'));
+router.use(require('./EventRoutes'));
 router.use(require('./BlogRoutes'));
 router.use(require('./userRoutes'));
 router.use(require('./roleRoutes'));
